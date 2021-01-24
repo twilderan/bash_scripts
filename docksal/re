@@ -8,5 +8,10 @@
 ##
 ## Author: Mykola Balabash
 
+if [[ "$1" == "" ]]; then
+	echo "Usage: fin re db.sql"
+	exit 1
+fi
+
 echo "Running 'fin db import $1 && fin drush cr && fin drush cim -y'"
 fin db import "$1" && fin drush cr && fin drush cim -y
