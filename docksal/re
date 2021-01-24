@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+## Reset Environment
+##
+## Imports database, rebuild caches, imports configs.
+##
+## Usage: "fin re db.sql"
+##
+## Author: Mykola Balabash
+
+echo "Running 'fin db import $1 && fin drush cr && fin drush cim -y'"
+fin db import "$1" && fin drush cr && fin drush cim -y

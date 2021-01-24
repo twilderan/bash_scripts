@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+## Import configs
+##
+## Rebuild caches, imports configs.
+##
+## Usage: "fin crcim"
+##
+## Author: Mykola Balabash
+
+echo "Running 'fin drush cr && fin drush cim -y'"
+fin drush cr && fin drush cim -y
